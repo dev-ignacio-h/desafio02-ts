@@ -1,15 +1,9 @@
-interface ICard {
-  id: number,
-  paragraph: string,
-  details: string
-}
+import { Box } from '@chakra-ui/react';
 
-export const Card = ({ id, paragraph, details }: ICard) => {
-  return(
-    <div>
-      <h1>Card {id}</h1>
-      <p>{paragraph}</p>
-      <p>{details}</p>
-    </div>
-  )
-}
+export const Card = ({ children }: any) => {
+  return (
+    <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
+      {children}
+    </Box>
+  );
+};
